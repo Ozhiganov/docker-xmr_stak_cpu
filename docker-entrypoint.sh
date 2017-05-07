@@ -59,11 +59,11 @@ echo "\"giveup_limit\" : $XMR_STAK_GIVEUP_LIMIT," >> /tmp/config.txt
 
 echo "\"verbose_level\" : 4," >> /tmp/config.txt
 echo "\"h_print_time\" : 60," >> /tmp/config.txt
-echo "\"output_file\" : \"\"," >> /tmp/config.txt
+echo "\"output_file\" : \"/dev/stdout\"," >> /tmp/config.txt
 
 echo "\"httpd_port\" : $XMR_STAK_HTTPD_PORT," >> /tmp/config.txt
 echo "\"prefer_ipv4\" : $XMR_STAK_PREFER_IPV4," >> /tmp/config.txt
 
 #exec gosu monero xmr-stak-cpu /tmp/config.txt
-xmr-stak-cpu /tmp/config.txt
+exec xmr-stak-cpu /tmp/config.txt
 
